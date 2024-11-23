@@ -1,0 +1,12 @@
+name: "Deploy Project"
+on: [push, workflow_dispatch]
+jobs:
+  Lint_Test_Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Lint
+        run: npm run lint
+      - name: Run Test
+        run: npm run Test
+      - name: Build
+        run: npm run build
