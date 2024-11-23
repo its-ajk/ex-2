@@ -1,8 +1,17 @@
 name: "Deploy Project"
 on: [push, workflow_dispatch]
 jobs:
+  Set_Env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Checkout
+        uses: actions/checkout@v4
+      - name: Install Dependencies
+        run: npm ci
+  
   Lint_Test_Deploy:
     runs-on: ubuntu-latest
+    needs: Set_Env
     steps:
       - name: Run Lint
         run: npm run lint
