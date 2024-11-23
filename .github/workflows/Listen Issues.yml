@@ -6,5 +6,5 @@ jobs:
     steps:
       - name: print json
         run: echo "${{toJSON(github)}}"
-      - name: print raw
-        run: echo "${{github}}"
+      - name: print issue
+        run: echo "${{toJSON(github.event.issue)}}"
