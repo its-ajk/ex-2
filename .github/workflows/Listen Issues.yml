@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print json
-        run: echo "${{toJSON(github)}}""
+        run: echo "${{toJSON(github)}}"
       - name: print raw
         run: echo "${{github}}"
