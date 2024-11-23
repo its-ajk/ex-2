@@ -1,5 +1,10 @@
 name: "Deploy Project"
-on: [push, workflow_dispatch]
+on: 
+  pull_request:
+    types:
+      - opened
+      - edited
+  workflow_dispatch:
 jobs:
   Lint_Test_Deploy:
     runs-on: ubuntu-latest
@@ -14,6 +19,6 @@ jobs:
         run: npm run test
       - name: Build Code
         run: npm run build
-      - name: Deploy Project"
+      - name: Deploy Project
         run: echo "Deploying..."
 
