@@ -4,7 +4,7 @@ jobs:
   Print_Issue_Details:
     runs-on: ubuntu-latest
     steps:
-      - name: print json
-        run: echo "${{toJSON(github.event)}}"
       - name: print issue
-        run: echo "${{github.event.issue}}"
+        run: echo "${{toJSON(github.event.issue)}}"
+      - name: print commit
+        run: echo "${{toJSON(github.event.commit)}}"
