@@ -1,10 +1,8 @@
 name: Issue Listener
-on: [push,issues]
+on: issues
 jobs:
   Print_Issue_Details:
     runs-on: ubuntu-latest
     steps:
       - name: print issue
         run: echo "${{toJSON(github.event.issue)}}"
-      - name: print commit
-        run: echo "${{toJSON(github.event.commit)}}"
