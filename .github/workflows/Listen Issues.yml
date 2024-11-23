@@ -7,4 +7,4 @@ jobs:
       - name: print json
         run: echo "${{toJSON(github)}}""
       - name: print raw
-        run: echo "{{github}}"
+        run: echo "${{github}}"
