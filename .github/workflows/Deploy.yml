@@ -41,7 +41,7 @@ jobs:
         with:
           name: dist-files
           path: dist
-    Deployment:
+  Deployment:
       needs: Build
       runs-on: ubuntu-latest
       steps:
